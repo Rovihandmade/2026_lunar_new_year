@@ -133,6 +133,7 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.2); z-index: 10;
         }
 
+        /* 圖片容器 */
         .product-image-container {
             width: 100%; height: 250px; 
             background-color: #ffffff;
@@ -157,10 +158,10 @@
         .original-price { text-decoration: line-through; color: #999; font-size: 0.85em; margin-right: 5px; }
         .special-price { color: var(--primary-red); font-size: 1.3em; font-weight: 900; }
 
-        /* 組合產品(Group)樣式 - 修正價格顯示 */
+        /* 組合產品(Group)樣式 */
         .variant-item {
             border-top: 1px dashed #ddd;
-            padding: 12px 0; /* 稍微增加間距 */
+            padding: 12px 0; 
         }
         .variant-item:first-of-type { border-top: 1px solid #eee; margin-top: 10px; }
         
@@ -169,7 +170,7 @@
             justify-content: space-between; 
             align-items: center; 
             margin-bottom: 8px; 
-            flex-wrap: wrap; /* 讓手機版價格太長時可以換行 */
+            flex-wrap: wrap; 
         }
         .variant-name { font-weight: 700; color: #5D4037; font-size: 0.95em; }
         
@@ -234,7 +235,7 @@
             <div class="logo"><i class="fas fa-gift"></i> Rovi蘿薇手作烘焙 2026新春禮盒</div>
             <nav class="nav-links">
                 <a href="#about">關於我們</a>
-                <a href="#order-info">預購須知</a>
+                <a href="#order-info">訂購須知</a>
                 <a href="#products">限量禮盒</a>
                 <a href="#contact">聯絡我們</a>
             </nav>
@@ -255,21 +256,13 @@
             </div>
         </section>
 
-        <!-- 預購須知 -->
+        <!-- 訂購須知 -->
         <section id="order-info" class="section" style="background-color: #F9EBEA;">
             <div class="container">
-                <h2>新春預購須知</h2>
-                <div class="sold-out-dates-container">
-                    <p class="sold-out-dates-title"><i class="fas fa-exclamation-circle"></i> 訂單額滿日期</p>
-                    <ul class="sold-out-dates-list">
-                        <li>2026/01/20 (二)</li>
-                        <li>2026/01/21 (三)</li>
-                    </ul>
-                    <p style="font-size:0.9em; color:#666;">其他日期名額有限，請盡早下單。實際出貨日請以購物車結帳表單為準。</p>
-                </div>
+                <h2>新春訂購須知</h2>
                 <div style="text-align:center; max-width:800px; margin:0 auto;">
-                    <p><strong>預購期間：</strong>即日起至 2026/01/15 止。</p>
-                    <p><strong>取貨方式：</strong>宅配 / 7-11店到店 / 工作室自取。</p>
+                    <p><strong>訂購期間：</strong>即日起至 2026/01/15 止。</p>
+                    <p><strong>取貨方式：</strong>面交 / 郵局宅配 / 7-11店到店。</p>
                     <p><strong>付款方式：</strong>轉帳匯款 / LINE PAY。</p>
                 </div>
             </div>
@@ -286,18 +279,22 @@
         
         <!-- 常見問題 -->
         <section id="faq" class="section container">
-            <h2>常見問題</h2>
+            <h2>常見問題&溫馨提醒</h2>
             <div style="background:#fff; padding:30px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
                 <h3>Q: 禮盒的保存期限？</h3>
-                <p>A:
-                <p>1.鳳梨酥系列、蛋黃酥系列及餅乾系列常溫保存2週（請放置陰涼處），冷藏可保存4週，食用前建議回烤，風味更佳。</p>
-                <p>2.腰果系列常溫保存3週（請放置陰涼處）。</p>
-                <p>3.開封後請盡快食用完畢。</p>
-
-
+                <p>A:</p>
+                <ul style="list-style-type: disc; margin-left: 20px;">
+                    <li>1.鳳梨酥系列、蛋黃酥系列及餅乾系列常溫保存2週（請放置陰涼處），冷藏可保存4週，食用前建議回烤，風味更佳。</li>
+                    <li>2.腰果系列常溫保存3週（請放置陰涼處）。</li>
+                    <li>3.開封後請盡快食用完畢。</li>
+                </ul>
                 <hr style="margin:20px 0; border:0; border-top:1px dashed #ddd;">
                 <h3>Q: 訂單何時確認？</h3>
                 <p>A: 填單後我們會盡速與您聯絡確認訂單內容，請留意 Email 或 Line 訊息。</p>
+                <hr style="margin:20px 0; border:0; border-top:1px dashed #ddd;">
+                <h3>溫馨小提醒</h3>
+                <p>由於宅配過年前一週(2/8-2/14)恐面臨物流配送量大致運送延遲的問題，建議宅配出貨(寄件)日期請選擇提早1週唷</p>
+                <p>為了呈現最完美的層次口感，我們的酥皮類點心（如綠豆椪、蛋黃酥）外皮製作得相當輕薄酥鬆。在運送的旅途中，可能會因為路途顛簸或靜電摩擦，導致少許表皮脫落或沾黏在包裝袋上。 這些「旅行的痕跡」雖然讓外觀稍微不完美，但絕對不會影響內餡的美味與品質，請您放心享用這份用心製作的美味！</p>
             </div>
         </section>
 
@@ -339,79 +336,79 @@
 
     <!-- JavaScript 邏輯 -->
     <script>
-        // ====== 設定區：請填入您的 Google 表單資訊 ======
-        const GOOGLE_FORM_ID = '1FAIpQLSeEyB2hoKkuFdFzjPW34Z4X57UB1yXg5fjashv5bCn96gfeAA'; // 您的表單 ID
+        // ====== 設定區 ======
+        const GOOGLE_FORM_ID = '1FAIpQLSeEyB2hoKkuFdFzjPW34Z4X57UB1yXg5fjashv5bCn96gfeAA'; 
         
-        // 表單欄位對應 ID (請依照您的新春表單修改)
+        // 🔴 Google 試算表 CSV 連結 (已自動轉為 CSV 格式)
+        const GOOGLE_SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTsBmjXGtTYagBu5UNGjhWoaAi6oFdKQPjDZyRhlN6P4O5pmtBvD5T9z-KNXrqqtrYzU-l3efwgHPvf/pub?output=csv';
+
+        // 表單對應 ID
         const PRODUCT_QUANTITY_ENTRY_IDS = {
-            'mix_9grid': '111111111',     // 9宮格 ID
-            'butter_cookie': '222222222', // 奶油酥餅 ID
-            'pineapple_classic': '123456789', // 經典鳳梨酥 ID
-            'pineapple_native': '987654321',  // 土鳳梨酥 ID
-            'cashew_box': '333333333'     // 腰果 ID
+            'mix_9grid': '111111111',     
+            'butter_cookie': '222222222', 
+            'pineapple_classic': '123456789', 
+            'pineapple_native': '987654321',  
+            'cashew_box': '333333333'     
         };
 
-        // ====== 產品資料 (限量版) ======
+        // ====== 產品資料 ======
         const products = [
-            // 1. 九宮格綜合禮盒
             {
                 type: 'single',
-                id: 'mix_9grid',
+                id: 'mix_9grid', // 對應 Google Sheet A欄
                 name: '金馬迎春・九宮格綜合禮盒',
-                originalPrice: 550, // 暫定價格，請修改
-                specialPrice: 520,  // 暫定價格，請修改
+                originalPrice: 550, 
+                specialPrice: 520,  
                 description: '限量50盒！經典蛋黃酥、綠豆椪與精選手工餅乾的完美組合，送禮大氣首選。',
-                image: 'https://rovihandmade.github.io/2026_lunar_new_year/gift_9grid.jpg', // 請確認檔名是否一致
-                ingredients: '烏豆沙蛋黃酥x1入、綠豆沙蛋黃酥x1入、紅豆麻吉酥x1入、招財貓原味餅乾x3入、檸檬糖霜餅乾x3入、巧克力鑽石餅乾x3入、桂圓手作餅乾x3入、義式蒜味掛霜腰果(60g)x1入、可可脆腰果(40g)x1入',
+                image: 'https://rovihandmade.github.io/2026_lunar_new_year/gift_9grid.jpg', 
+                ingredients: '烏豆沙蛋黃酥x1、綠豆沙蛋黃酥x1、紅豆麻吉酥x1、招財貓原味餅乾x3、檸檬糖霜餅乾x3、巧克力鑽石餅乾x3、桂圓手作餅乾x3、義式蒜味掛霜腰果(60g)x1、可可脆腰果(40g)x1',
                 totalStock: 50,
-                remainingStock: 30
+                remainingStock: 30 // 預設值，會被試算表覆蓋
             },
-            // 2. 奶油酥餅禮盒
             {
                 type: 'single',
-                id: 'butter_cookie',
+                id: 'butter_cookie', // 對應 Google Sheet A欄
                 name: '經典奶油酥餅禮盒',
-                originalPrice: 320, // 暫定價格，請修改
-                specialPrice: 300,  // 暫定價格，請修改
+                originalPrice: 320, 
+                specialPrice: 300,  
                 description: '質感墨綠手提袋裝。濃郁奶油香氣，酥鬆口感入口即化，限量40盒。',
-                image: 'https://rovihandmade.github.io/2026_lunar_new_year/gift_butter.jpg', // 請確認檔名是否一致
+                image: 'https://rovihandmade.github.io/2026_lunar_new_year/gift_butter.jpg', 
                 ingredients: '奶油酥餅 x 8入',
                 totalStock: 40,
                 remainingStock: 30
             },
-            // 3. 鳳梨酥系列 (10入)
             {
                 type: 'group',
+                id: 'pineapple_box', // 對應 Google Sheet A欄 (鳳梨酥共用庫存)
                 name: '旺來鳳梨酥禮盒 (10入)',
-                image: 'https://rovihandmade.github.io/2026_lunar_new_year/gift_pineapple.jpg', // 請確認檔名是否一致
+                image: 'https://rovihandmade.github.io/2026_lunar_new_year/gift_pineapple.jpg', 
                 description: '粉嫩禮盒包裝，內含10顆。皮酥餡香，經典原味與土鳳梨兩種風味任選。',
                 ingredients: '經典鳳梨酥/土鳳梨酥 x 10入',
                 totalStock: 50,
-                remainingStock: 30, // 兩款共用庫存顯示
+                remainingStock: 30, // 兩款共用此庫存
                 variants: [
                     {
                         id: 'pineapple_classic',
                         name: '經典鳳梨酥',
-                        originalPrice: 430, // 已更新價格
-                        specialPrice: 400   // 請確認優惠價
+                        originalPrice: 430,
+                        specialPrice: 400
                     },
                     {
                         id: 'pineapple_native',
                         name: '土鳳梨酥 (微酸)',
-                        originalPrice: 550, // 已更新價格
-                        specialPrice: 520   // 請確認優惠價
+                        originalPrice: 550,
+                        specialPrice: 520
                     }
                 ]
             },
-            // 4. 腰果禮盒
             {
                 type: 'single',
-                id: 'cashew_box',
+                id: 'cashew_box', // 對應 Google Sheet A欄
                 name: '雙饗腰果禮盒',
-                originalPrice: 330, // 暫定價格，請修改
-                specialPrice: 310,  // 暫定價格，請修改
+                originalPrice: 330, 
+                specialPrice: 310,  
                 description: '健康美味首選。嚴選腰果，低溫烘焙保留營養與酥脆口感。',
-                image: 'https://rovihandmade.github.io/2026_lunar_new_year/gift_cashew.jpg', // 請確認檔名是否一致
+                image: 'https://rovihandmade.github.io/2026_lunar_new_year/gift_cashew.jpg', 
                 ingredients: '義式蒜味掛霜腰果(150g)/可可脆腰果(100g)',
                 totalStock: 50,
                 remainingStock: 39
@@ -420,30 +417,65 @@
 
         let cart = [];
 
-        // 初始化
+        // 初始化：先顯示預設，再抓庫存更新
         document.addEventListener('DOMContentLoaded', () => {
-            renderProducts();
-            updateCartDisplay();
+            renderProducts(); // 1. 立刻渲染 (確保不留白)
+            fetchStock();     // 2. 抓庫存並更新
             setupEventListeners();
         });
+
+        // 抓取 Google Sheet 庫存
+        function fetchStock() {
+            fetch(GOOGLE_SHEET_CSV_URL)
+                .then(response => response.text())
+                .then(text => {
+                    const rows = text.split('\n').slice(1);
+                    rows.forEach(row => {
+                        const cols = row.split(',');
+                        // 防呆：確認該行有資料才處理
+                        if(cols.length >= 2 && cols[0] && cols[1]) {
+                            const id = cols[0].trim();
+                            const stock = parseInt(cols[1].trim());
+                            
+                            // 只有當數字是有效的時候才更新
+                            if (!isNaN(stock)) {
+                                const product = products.find(p => p.id === id);
+                                if (product) {
+                                    product.remainingStock = stock;
+                                }
+                            }
+                        }
+                    });
+                    renderProducts(); // 3. 數據更新後再次渲染
+                })
+                .catch(error => {
+                    console.error('庫存讀取失敗，使用預設值:', error);
+                    // 失敗也沒關係，因為第1步已經渲染了預設值
+                });
+        }
 
         // 渲染主產品
         function renderProducts() {
             const container = document.getElementById('product-list');
+            if (!container) return; // 防呆
             container.innerHTML = '';
 
             products.forEach(p => {
                 const card = document.createElement('div');
                 card.className = 'product-card';
 
-                // 庫存標籤
-                const stockBadge = `
-                    <div class="stock-badge">
-                        <i class="fas fa-fire"></i> 限量 ${p.totalStock} 盒｜剩餘 ${p.remainingStock} 盒
-                    </div>
-                `;
+                // 庫存標籤邏輯
+                let stockHtml = '';
+                let disableBtn = '';
+                if (p.remainingStock <= 0) {
+                    stockHtml = `<div class="stock-badge" style="background:#555;">❌ 已售完</div>`;
+                    disableBtn = 'disabled style="background:#ccc; cursor:not-allowed;"';
+                } else if (p.remainingStock < 10) {
+                    stockHtml = `<div class="stock-badge" style="background:#C0392B;">🔥 僅剩 ${p.remainingStock} 盒</div>`;
+                } else {
+                    stockHtml = `<div class="stock-badge" style="background:#E67E22;">限量 ${p.totalStock} ｜ 餘 ${p.remainingStock}</div>`;
+                }
 
-                // 圖片區
                 const imgHtml = p.image 
                     ? `<div class="product-image-container"><img src="${p.image}" alt="${p.name}"></div>`
                     : `<div class="product-image-placeholder"><p>${p.name}</p></div>`;
@@ -451,7 +483,7 @@
                 let contentHtml = '';
 
                 if (p.type === 'group') {
-                    // --- 組合商品渲染邏輯 (這裡修改了顯示原價的語法) ---
+                    // --- 組合商品渲染邏輯  ---
                     let variantsHtml = '';
                     p.variants.forEach(v => {
                         variantsHtml += `
@@ -465,11 +497,11 @@
                                 </div>
                                 <div class="quantity-control">
                                     <div class="qty-btn-group">
-                                        <button data-id="${v.id}" data-action="decrease">-</button>
-                                        <input type="number" value="0" min="0" data-id="${v.id}" class="qty-input">
-                                        <button data-id="${v.id}" data-action="increase">+</button>
+                                        <button data-id="${v.id}" data-action="decrease" ${disableBtn}>-</button>
+                                        <input type="number" value="0" min="0" max="${p.remainingStock}" data-id="${v.id}" class="qty-input" ${disableBtn}>
+                                        <button data-id="${v.id}" data-action="increase" ${disableBtn}>+</button>
                                     </div>
-                                    <button class="btn primary-btn add-to-cart-btn" style="width:auto; padding:5px 15px;" data-id="${v.id}">加入</button>
+                                    <button class="btn primary-btn add-to-cart-btn" style="width:auto; padding:5px 15px; ${p.remainingStock<=0?'background:#999;':''}" data-id="${v.id}" ${disableBtn}>${p.remainingStock<=0?'完售':'加入'}</button>
                                 </div>
                             </div>
                         `;
@@ -501,12 +533,12 @@
                                 </div>
                                 <div class="quantity-control">
                                     <div class="qty-btn-group">
-                                        <button data-id="${p.id}" data-action="decrease">-</button>
-                                        <input type="number" value="0" min="0" data-id="${p.id}" class="qty-input">
-                                        <button data-id="${p.id}" data-action="increase">+</button>
+                                        <button data-id="${p.id}" data-action="decrease" ${disableBtn}>-</button>
+                                        <input type="number" value="0" min="0" max="${p.remainingStock}" data-id="${p.id}" class="qty-input" ${disableBtn}>
+                                        <button data-id="${p.id}" data-action="increase" ${disableBtn}>+</button>
                                     </div>
                                 </div>
-                                <button class="btn primary-btn add-to-cart-btn" data-id="${p.id}">加入購物車</button>
+                                <button class="btn primary-btn add-to-cart-btn" data-id="${p.id}" ${disableBtn} ${p.remainingStock<=0?'style="background:#999;"':''}>${p.remainingStock<=0?'已售完':'加入購物車'}</button>
                             </div>
                         </div>
                     `;
@@ -523,7 +555,13 @@
             document.addEventListener('click', (e) => {
                 if(e.target.dataset.action === 'increase') {
                     const input = document.querySelector(`.qty-input[data-id="${e.target.dataset.id}"]`);
-                    input.value = parseInt(input.value) + 1;
+                    // 簡易庫存檢查
+                    const max = parseInt(input.getAttribute('max'));
+                    if(parseInt(input.value) < max) {
+                        input.value = parseInt(input.value) + 1;
+                    } else {
+                        alert("已達庫存上限");
+                    }
                 }
                 if(e.target.dataset.action === 'decrease') {
                     const input = document.querySelector(`.qty-input[data-id="${e.target.dataset.id}"]`);
