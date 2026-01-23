@@ -1,14 +1,12 @@
-# 2026_lunar_new_year
-
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【Rovi蘿薇手作烘培】2026 金馬迎春禮盒 預購中</title>
+    <title>【Rovi蘿薇手作烘培】2026 金馬迎春限量禮盒</title>
     <!-- 引入 Font Awesome 圖示 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- 引入圓體字型，增加節慶感 -->
+    <!-- 引入圓體字型 -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
 
     <style>
@@ -16,10 +14,9 @@
         :root {
             --bg-color: #FFF8F5; /* 淺粉膚色背景 */
             --text-color: #5D4037; /* 深褐色文字 */
-            --primary-red: #C0392B; /* 喜氣紅 (標題/按鈕) */
-            --primary-gold: #D4AC0D; /* 富貴金 (邊框/強調) */
+            --primary-red: #C0392B; /* 喜氣紅 */
+            --primary-gold: #D4AC0D; /* 富貴金 */
             --card-bg: #FFFFFF;
-            --light-red: #F9EBEA;
         }
 
         /* 基本重置 */
@@ -30,212 +27,215 @@
             line-height: 1.6;
             color: var(--text-color);
             background-color: var(--bg-color);
-            background-image: radial-gradient(#E6B0AA 1.5px, transparent 1.5px); /* 背景點點紋理 */
+            background-image: radial-gradient(#E6B0AA 1.5px, transparent 1.5px);
             background-size: 25px 25px;
         }
 
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        /* 寬度設定 */
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
 
         /* 字體與標題 */
         h1, h2, h3 {
-            font-family: 'Zen Maru Gothic', sans-serif; /* 圓體標題 */
+            font-family: 'Zen Maru Gothic', sans-serif;
             font-weight: 700;
             color: var(--primary-red);
         }
 
         h1 { font-size: 2.5em; margin-bottom: 20px; }
         h2 { 
-            font-size: 2em; 
-            margin-bottom: 40px; 
-            text-align: center; 
-            position: relative;
-            padding-bottom: 15px;
+            font-size: 2em; margin-bottom: 40px; text-align: center; 
+            position: relative; padding-bottom: 15px;
         }
-        /* 標題下方金色裝飾線 */
         h2::after {
             content: ''; display: block; width: 60px; height: 3px;
             background-color: var(--primary-gold); margin: 10px auto 0;
         }
 
-        h3 { font-size: 1.4em; margin-bottom: 10px; color: var(--text-color); }
+        h3 { font-size: 1.4em; margin-bottom: 10px; }
         p { margin-bottom: 15px; }
-
         .section { padding: 60px 0; }
         .section-description { text-align: center; max-width: 700px; margin: 0 auto 50px; color: #666; font-size: 1.1em; }
 
-        /* 按鈕樣式 (新春版) */
+        /* 按鈕 */
         .btn {
-            display: inline-block; padding: 12px 25px; border-radius: 50px;
-            text-decoration: none; font-weight: 700; transition: all 0.3s ease;
-            cursor: pointer; border: none; font-size: 1em;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: inline-block; padding: 12px 25px; border-radius: 5px;
+            text-decoration: none; font-weight: 700; transition: 0.3s;
+            cursor: pointer; border: none; font-size: 1em; width: 100%;
         }
-        .primary-btn {
-            background-color: var(--primary-red);
-            color: #fff;
-        }
-        .primary-btn:hover {
-            background-color: #A93226;
-            transform: translateY(-2px);
-        }
-        .secondary-btn {
-            background-color: #fff; color: var(--text-color);
-            border: 2px solid var(--primary-gold);
-        }
-        .secondary-btn:hover { background-color: #FEF9E7; }
+        .primary-btn { background-color: var(--primary-red); color: #fff; }
+        .primary-btn:hover { background-color: #A93226; transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+        .secondary-btn { background-color: #fff; color: var(--text-color); border: 1px solid #ccc; }
+        .secondary-btn:hover { background-color: #eee; }
 
         /* Header */
         header {
-            background-color: rgba(255, 255, 255, 0.95);
-            padding: 15px 0;
+            background-color: rgba(255,255,255,0.95); padding: 15px 0;
             box-shadow: 0 4px 10px rgba(192, 57, 43, 0.1);
             position: sticky; top: 0; z-index: 1000;
             border-bottom: 3px solid var(--primary-red);
         }
         .header-content { display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 1.5em; font-weight: 700; color: var(--primary-red); }
-        .logo i { margin-right: 5px; color: var(--primary-gold); }
         
         nav a { margin-left: 20px; color: var(--text-color); text-decoration: none; transition: 0.3s; }
         nav a:hover { color: var(--primary-red); font-weight: bold; }
 
-        .cart-icon { position: relative; font-size: 1.5em; color: var(--primary-red); cursor: pointer; margin-left: 20px;}
+        .cart-icon { position: relative; font-size: 1.5em; color: var(--primary-red); cursor: pointer; }
         #cart-count {
             position: absolute; top: -8px; right: -10px;
             background-color: var(--primary-gold); color: #fff;
             border-radius: 50%; padding: 2px 6px; font-size: 0.7em; font-weight: 700;
         }
 
-        /* Hero Section */
+        /* Hero */
         .hero-section {
             background: linear-gradient(135deg, var(--primary-red), #922B21);
             color: #fff; text-align: center; padding: 100px 20px;
             border-bottom: 5px solid var(--primary-gold);
         }
-        .hero-text h1 { color: #fff; text-shadow: 2px 2px 5px rgba(0,0,0,0.2); }
+        .hero-text h1 { color: #fff; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
         .hero-text p { font-size: 1.2em; color: #F9E79F; margin-bottom: 30px; }
-        .hero-text .btn { background-color: var(--primary-gold); color: #922B21; }
 
-        /* Photo Gallery (禮盒展示) */
-        .photo-gallery-section { background-color: #fff; text-align: center; }
-        .gallery-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px; margin-top: 30px;
-        }
-        .gallery-item {
-            background: #fff; border-radius: 10px; overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1); border: 1px solid #eee;
-        }
-        .gallery-item img { width: 100%; height: 200px; object-fit: cover; }
-        .gallery-item p { padding: 10px; font-weight: bold; color: var(--primary-red); }
-
-        /* Order Info (Sold Out Dates) */
-        .order-info-section { background-color: var(--light-red); text-align: center; }
-        .sold-out-dates-container {
-            background-color: #fff; border: 2px dashed var(--primary-red);
-            border-radius: 10px; padding: 25px; margin: 30px auto; max-width: 600px;
-        }
-        .sold-out-dates-title { font-size: 1.2em; font-weight: 700; color: var(--primary-red); }
-        .sold-out-dates-list {
-            display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 15px 0;
-        }
-        .sold-out-dates-list li {
-            background-color: var(--primary-red); color: #fff;
-            padding: 5px 15px; border-radius: 50px; font-size: 0.9em;
+        /* Products Grid 設定 */
+        .product-grid { 
+            display: grid; 
+            gap: 20px; 
+            grid-template-columns: 1fr;
         }
 
-        /* Products Section */
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        /* 平板版 2 欄 */
+        @media (min-width: 768px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* 電腦版 (寬度大於 1024px) 強制 4 欄 */
+        @media (min-width: 1024px) {
+            .product-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
         
         .product-card {
-            background-color: var(--card-bg); border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(192, 57, 43, 0.08); /* 紅色系陰影 */
+            background-color: var(--card-bg); border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(192, 57, 43, 0.08);
             overflow: hidden; padding: 0; display: flex; flex-direction: column;
-            border: 1px solid #eee; transition: 0.3s;
+            border: 1px solid #eee; transition: 0.3s; position: relative;
         }
         .product-card:hover { transform: translateY(-5px); border-color: var(--primary-gold); }
 
+        /* 庫存標籤 */
+        .stock-badge {
+            position: absolute; top: 10px; left: 10px;
+            background-color: rgba(192, 57, 43, 0.9); color: #fff;
+            padding: 5px 10px; border-radius: 20px; font-size: 0.8em; font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2); z-index: 10;
+        }
+
         .product-image-container {
-            width: 100%; height: 220px; background-color: #f8f8f8;
+            width: 100%; height: 250px; 
+            background-color: #f8f8f8;
             display: flex; justify-content: center; align-items: center; overflow: hidden;
         }
         .product-image-container img { width: 100%; height: 100%; object-fit: cover; }
-
-        /* 圖片佔位符 */
+        
         .product-image-placeholder {
-            width: 100%; height: 220px; background-color: #F2D7D5;
+            width: 100%; height: 250px; background-color: #F2D7D5;
             display: flex; flex-direction: column; justify-content: center; align-items: center;
             color: var(--primary-red); text-align: center; padding: 10px;
         }
 
-        .product-content { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
-        .product-card h3 { margin-bottom: 10px; color: var(--primary-red); border-left: 4px solid var(--primary-gold); padding-left: 10px; }
-        .product-card .description { font-size: 0.95em; color: #666; margin-bottom: 15px; flex-grow: 1; }
-        .ingredients { font-size: 0.85em; color: #999; margin-bottom: 15px; }
+        .product-content { padding: 15px; display: flex; flex-direction: column; flex-grow: 1; }
+        .product-card h3 { margin-bottom: 10px; color: var(--primary-red); border-left: 4px solid var(--primary-gold); padding-left: 10px; font-size: 1.2em; }
+        .product-card .description { font-size: 0.9em; color: #666; margin-bottom: 10px; }
+        .ingredients { font-size: 0.8em; color: #999; margin-bottom: 10px; }
 
-        .price-area { margin-bottom: 15px; }
-        .original-price { text-decoration: line-through; color: #999; font-size: 0.9em; margin-right: 5px; }
-        .special-price { color: var(--primary-red); font-size: 1.4em; font-weight: 900; }
+        /* 單一產品的價格與控制 */
+        .single-product-footer { margin-top: auto; }
+        .price-area { margin-bottom: 10px; }
+        .original-price { text-decoration: line-through; color: #999; font-size: 0.85em; margin-right: 5px; }
+        .special-price { color: var(--primary-red); font-size: 1.3em; font-weight: 900; }
+
+        /* 組合產品(Group)樣式 - 修正價格顯示 */
+        .variant-item {
+            border-top: 1px dashed #ddd;
+            padding: 12px 0; /* 稍微增加間距 */
+        }
+        .variant-item:first-of-type { border-top: 1px solid #eee; margin-top: 10px; }
+        
+        .variant-info { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            margin-bottom: 8px; 
+            flex-wrap: wrap; /* 讓手機版價格太長時可以換行 */
+        }
+        .variant-name { font-weight: 700; color: #5D4037; font-size: 0.95em; }
+        
+        /* 組合產品的價格區塊 */
+        .variant-price-group {
+            text-align: right;
+        }
+        .variant-original-price {
+            text-decoration: line-through; color: #999; font-size: 0.8em; margin-right: 3px;
+        }
+        .variant-special-price {
+            color: var(--primary-red); font-weight: bold; font-size: 1.1em;
+        }
 
         /* 數量控制 */
-        .quantity-control { display: flex; align-items: center; justify-content: center; margin-bottom: 15px; }
+        .quantity-control { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+        .qty-btn-group { display: flex; align-items: center; }
         .quantity-control button {
-            width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ccc;
-            background: #fff; cursor: pointer; font-weight: bold;
+            width: 28px; height: 28px; border-radius: 50%; border: 1px solid #ccc;
+            background: #fff; cursor: pointer; font-weight: bold; color: #555;
+            display: flex; align-items: center; justify-content: center;
         }
         .quantity-control input {
-            width: 50px; text-align: center; border: none; font-size: 1.1em; margin: 0 10px;
-            background: transparent;
+            width: 35px; text-align: center; border: none; font-size: 1em; margin: 0 2px;
+            background: transparent; color: #333;
         }
-        .add-to-cart-btn { width: 100%; margin-top: auto; border-radius: 8px; }
+        .add-to-cart-btn { padding: 8px 0; font-size: 0.9em; }
 
-        /* ====== 加購專區樣式 (New) ====== */
-        .addons-section { background-color: #fff; border-top: 5px solid var(--primary-gold); }
-        .addons-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
-        
-        .addon-card {
-            background-color: #FEF9E7; /* 淡金色背景區隔 */
-            border: 1px dashed var(--primary-gold);
-            border-radius: 10px; padding: 15px;
-            text-align: center; display: flex; flex-direction: column;
+        /* Order Info */
+        .sold-out-dates-container {
+            background-color: #fff; border: 2px dashed var(--primary-red);
+            border-radius: 10px; padding: 25px; margin: 30px auto; max-width: 600px;
+            text-align: center;
         }
-        .addon-card h3 { font-size: 1.1em; margin-bottom: 5px; color: var(--text-color); }
-        .addon-card .price { color: var(--primary-red); font-weight: bold; font-size: 1.2em; margin-bottom: 10px; }
-        .addon-card .add-to-cart-btn { padding: 8px; font-size: 0.9em; }
+        .sold-out-dates-list { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 15px 0; }
+        .sold-out-dates-list li { background-color: var(--primary-red); color: #fff; padding: 5px 15px; border-radius: 50px; }
 
-        /* Cart Summary */
+        /* Cart Summary (底部浮動) */
         .cart-summary-section {
-            background-color: #fff; border-top: 1px solid #eee;
+            background-color: #fff; border-top: 2px solid var(--primary-gold);
             position: fixed; bottom: 0; left: 0; right: 0; z-index: 2000;
             box-shadow: 0 -5px 20px rgba(0,0,0,0.1); padding: 20px;
-            transform: translateY(100%); transition: transform 0.3s ease-in-out;
+            transform: translateY(110%); transition: transform 0.3s ease-in-out;
         }
         .cart-summary-section.active { transform: translateY(0); }
-
-        .cart-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
-        .cart-items { max-height: 200px; overflow-y: auto; border: 1px solid #eee; padding: 10px; margin-bottom: 10px; border-radius: 5px; }
-        .cart-item { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed #ddd; padding: 8px 0; }
-        .cart-total { text-align: right; font-size: 1.3em; font-weight: bold; color: var(--primary-red); margin-bottom: 10px; }
+        .cart-items { max-height: 200px; overflow-y: auto; border: 1px solid #eee; padding: 10px; margin-bottom: 10px; }
+        .cart-item { display: flex; justify-content: space-between; border-bottom: 1px dashed #ddd; padding: 8px 0; }
+        .cart-total { text-align: right; font-size: 1.3em; font-weight: bold; color: var(--primary-red); }
 
         /* Responsive */
         @media (max-width: 768px) {
+            .nav-links { display: none; }
             .hero-text h1 { font-size: 2em; }
-            .nav-links { display: none; } /* 手機版隱藏選單 */
-            .logo { font-size: 1.2em; }
+            .product-image-container, .product-image-placeholder { height: 220px; }
         }
-        .hidden { display: none !important; }
     </style>
 </head>
 <body>
 
     <header>
         <div class="container header-content">
-            <div class="logo"><i class="fas fa-gift"></i> Rovi蘿薇 2026金馬迎春</div>
+            <div class="logo"><i class="fas fa-gift"></i> Rovi蘿薇手作烘焙 2026新春禮盒</div>
             <nav class="nav-links">
                 <a href="#about">關於我們</a>
-                <a href="#products">新春禮盒</a>
-                <a href="#add-ons">加購專區</a>
-                <a href="#order-info">訂購須知</a>
+                <a href="#order-info">預購須知</a>
+                <a href="#products">限量禮盒</a>
                 <a href="#contact">聯絡我們</a>
             </nav>
             <div class="cart-icon">
@@ -250,90 +250,75 @@
         <section id="hero" class="hero-section"> 
             <div class="hero-text">
                 <h1>2026 金馬迎春・新春獻禮</h1>
-                <p>嚴選食材，匠心烘焙。預購優惠中，為您傳遞最真摯的祝福。</p>
-                <a href="#products" class="btn btn-light" style="background:#fff; color:#C0392B;">立即選購</a>
+                <p>嚴選食材，匠心烘焙。限量禮盒預購中，為您傳遞最真摯的祝福。</p>
+                <a href="#products" class="btn primary-btn" style="background:#fff; color:#C0392B; width: auto;">立即選購</a>
             </div>
         </section>
 
-        <!-- 禮盒款式 Gallery (可選) -->
-        <section id="photo-gallery" class="section photo-gallery-section container">
-            <h2>新春限定包裝</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <!-- 圖片連結請自行替換 -->
-                    <img src="https://placehold.co/400x300/C0392B/FFF?text=Gift+Box+A" alt="禮盒A">
-                    <p>富貴金馬禮盒 (8入)</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://placehold.co/400x300/D4AC0D/FFF?text=Gift+Box+B" alt="禮盒B">
-                    <p>迎春納福禮盒 (12入)</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 訂購須知 & 額滿公告 -->
-        <section id="order-info" class="section order-info-section">
+        <!-- 預購須知 -->
+        <section id="order-info" class="section" style="background-color: #F9EBEA;">
             <div class="container">
                 <h2>新春預購須知</h2>
                 <div class="sold-out-dates-container">
-                    <p class="sold-out-dates-title"><i class="fas fa-exclamation-circle"></i> 訂單額滿日期 (持續更新)</p>
+                    <p class="sold-out-dates-title"><i class="fas fa-exclamation-circle"></i> 訂單額滿日期</p>
                     <ul class="sold-out-dates-list">
-                        <!-- 範例，沒額滿可註解掉 -->
-                        <li>2026/01/20 (小年夜)</li>
-                        <li>2026/01/21 (除夕)</li>
+                        <li>2026/01/20 (二)</li>
+                        <li>2026/01/21 (三)</li>
                     </ul>
                     <p style="font-size:0.9em; color:#666;">其他日期名額有限，請盡早下單。實際出貨日請以購物車結帳表單為準。</p>
+                </div>
+                <div style="text-align:center; max-width:800px; margin:0 auto;">
+                    <p><strong>預購期間：</strong>即日起至 2026/01/15 止。</p>
+                    <p><strong>取貨方式：</strong>宅配 / 7-11店到店 / 工作室自取。</p>
+                    <p><strong>付款方式：</strong>轉帳匯款 / LINE PAY。</p>
                 </div>
             </div>
         </section>
 
-        <!-- 主要產品區 -->
-        <section id="products" class="section products-section container">
-            <h2>新春禮盒系列</h2>
-            <p class="section-description">品味經典，探索新意。多款限定手作烘焙，滿足您對佳節美味的所有期待。</p>
+        <!-- 產品列表 -->
+        <section id="products" class="section container">
+            <h2>新春限量禮盒</h2>
+            <p class="section-description">主打4款精美禮盒，數量有限，售完為止。</p>
             <div class="product-grid" id="product-list">
-                <!-- 產品由 JS 動態生成 -->
+                <!-- JS 動態生成 -->
             </div>
         </section>
-
-        <!-- 【新增】加購專區 -->
-        <section id="add-ons" class="section addons-section container">
-            <h2><i class="fas fa-plus-circle"></i> 加購專區</h2>
-            <p class="section-description">提袋、小點心加購，心意更完整。</p>
-            <div class="addons-grid" id="addon-list">
-                <!-- 加購品項由 JS 動態生成 -->
-            </div>
-        </section>
-
+        
         <!-- 常見問題 -->
         <section id="faq" class="section container">
             <h2>常見問題</h2>
-            <div style="background:#fff; padding:20px; border-radius:10px;">
-                <h3>Q: 禮盒保存期限？</h3>
-                <p>常溫保存約 14 天，建議於 7 天內食用完畢風味最佳。</p>
-                <hr style="border:0; border-top:1px dashed #ddd; margin:10px 0;">
-                <h3>Q: 如何確認訂單？</h3>
-                <p>填寫完 Google 表單後，請查收 Email 或 Line 確認信，並於 24 小時內匯款。</p>
+            <div style="background:#fff; padding:30px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
+                <h3>Q: 禮盒的保存期限？</h3>
+                <p>A:
+                <p>1.鳳梨酥系列、蛋黃酥系列及餅乾系列常溫保存2週（請放置陰涼處），冷藏可保存4週，食用前建議回烤，風味更佳。</p>
+                <p>2.腰果系列常溫保存3週（請放置陰涼處）。</p>
+                <p>3.開封後請盡快食用完畢。</p>
+
+
+                <hr style="margin:20px 0; border:0; border-top:1px dashed #ddd;">
+                <h3>Q: 訂單何時確認？</h3>
+                <p>A: 填單後我們會盡速與您聯絡確認訂單內容，請留意 Email 或 Line 訊息。</p>
             </div>
         </section>
 
         <!-- 聯絡我們 -->
         <section id="contact" class="section container" style="text-align:center;">
             <h2>與我們聯繫</h2>
-            <div class="social-links" style="font-size:2em;">
-                <a href="https://line.me/ti/p/VN8SFJACt2" target="_blank" style="color:#06C755; margin:0 10px;"><i class="fab fa-line"></i></a>
-                <a href="https://www.instagram.com/rovihandmade" target="_blank" style="color:#E1306C; margin:0 10px;"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/share/1EtxRn7jGt/?mibextid=wwXIfr" target="_blank" style="color:#1877F2; margin:0 10px;"><i class="fab fa-facebook-square"></i></a>
+            <p>若有任何疑問，歡迎私訊粉絲專頁</p>
+            <div style="font-size:2.5em; margin-top:20px;">
+                <a href="https://line.me/ti/p/VN8SFJACt2" target="_blank" style="color:#06C755; margin:0 15px;"><i class="fab fa-line"></i></a>
+                <a href="https://www.instagram.com/rovihandmade" target="_blank" style="color:#E1306C; margin:0 15px;"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/share/1EtxRn7jGt/?mibextid=wwXIfr" target="_blank" style="color:#1877F2; margin:0 15px;"><i class="fab fa-facebook-square"></i></a>
             </div>
         </section>
     </main>
 
-    <!-- 底部購物車 (浮動式) -->
+    <!-- 購物車 (浮動視窗) -->
     <div id="cart-summary-section" class="cart-summary-section">
         <div class="container">
-            <div class="cart-header">
-                <h3><i class="fas fa-shopping-cart"></i> 您的訂單明細</h3>
-                <button id="close-cart-btn" style="background:none; border:none; font-size:1.5em;"><i class="fas fa-times"></i></button>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px;">
+                <h3 style="margin:0;"><i class="fas fa-shopping-cart"></i> 您的訂單</h3>
+                <button id="close-cart-btn" style="background:none; border:none; font-size:1.5em; cursor:pointer;"><i class="fas fa-times"></i></button>
             </div>
             <div class="cart-items" id="cart-items-display">
                 <p>購物車是空的。</p>
@@ -341,182 +326,264 @@
             <div class="cart-total">
                 總計：<span id="cart-total-amount">$0</span>
             </div>
-            <button id="proceed-to-form-btn" class="btn primary-btn" style="width:100%;">確認訂單，前往填寫資訊</button>
-            <button id="clear-cart-btn" class="btn secondary-btn" style="width:100%; margin-top:10px; border:none; color:#999;">清空購物車</button>
+            <button id="proceed-to-form-btn" class="btn primary-btn" style="margin-top:15px;">確認訂單，前往填寫資訊</button>
+            <button id="clear-cart-btn" class="btn secondary-btn" style="margin-top:10px; border:none; color:#999;">清空購物車</button>
         </div>
     </div>
 
     <footer>
-        <div class="container" style="text-align:center; padding:20px; background:#5D4037; color:#fff;">
-            <p>&copy; 2026 Rovi蘿薇手作烘培。金馬迎春，萬事如意。</p>
+        <div class="container" style="text-align:center; padding:30px 0; background-color:#5D4037; color:#fff; margin-top:50px;">
+            <p>&copy; 2026 Rovi蘿薇手作烘培。保留所有權利。</p>
         </div>
     </footer>
 
     <!-- JavaScript 邏輯 -->
     <script>
-        // ====== 設定區 (請修改這裡) ======
-        // 1. Google 表單 ID
-        const GOOGLE_FORM_ID = '1FAIpQLSe......'; // 請填入新的表單 ID
-
-        // 2. 產品對應表單欄位 ID (主產品 + 加購品都要有)
+        // ====== 設定區：請填入您的 Google 表單資訊 ======
+        const GOOGLE_FORM_ID = '1FAIpQLSeEyB2hoKkuFdFzjPW34Z4X57UB1yXg5fjashv5bCn96gfeAA'; // 您的表單 ID
+        
+        // 表單欄位對應 ID (請依照您的新春表單修改)
         const PRODUCT_QUANTITY_ENTRY_IDS = {
-            'pineapple_classic': 'entry.123456',  // 範例 ID
-            'pineapple_native': 'entry.234567',
-            'egg_yolk_box': 'entry.345678',
-            'cookies_bag': 'entry.456789', // 這是加購品的 ID
-            'gift_bag': 'entry.567890'     // 這是加購品的 ID
+            'mix_9grid': '111111111',     // 9宮格 ID
+            'butter_cookie': '222222222', // 奶油酥餅 ID
+            'pineapple_classic': '123456789', // 經典鳳梨酥 ID
+            'pineapple_native': '987654321',  // 土鳳梨酥 ID
+            'cashew_box': '333333333'     // 腰果 ID
         };
 
-        // 3. 主產品列表
+        // ====== 產品資料 (限量版) ======
         const products = [
+            // 1. 九宮格綜合禮盒
             {
-                id: 'pineapple_classic',
-                name: '經典鳳梨酥禮盒',
-                originalPrice: 350,
-                specialPrice: 330,
-                description: '皮酥餡香，經典原味。',
-                image: '', // 請填入圖片網址
-                ingredients: '麵粉、鳳梨餡、奶油、糖、蛋',
-                unit: '8入/盒'
+                type: 'single',
+                id: 'mix_9grid',
+                name: '金馬迎春・九宮格綜合禮盒',
+                originalPrice: 550, // 暫定價格，請修改
+                specialPrice: 520,  // 暫定價格，請修改
+                description: '限量50盒！經典蛋黃酥、綠豆椪與精選手工餅乾的完美組合，送禮大氣首選。',
+                image: 'https://rovihandmade.github.io/2026_lunar_new_year/gift_9grid.jpg', // 請確認檔名是否一致
+                ingredients: '烏豆沙蛋黃酥x1入、綠豆沙蛋黃酥x1入、紅豆麻吉酥x1入、招財貓原味餅乾x3入、檸檬糖霜餅乾x3入、巧克力鑽石餅乾x3入、桂圓手作餅乾x3入、義式蒜味掛霜腰果(60g)x1入、可可脆腰果(40g)x1入',
+                totalStock: 50,
+                remainingStock: 30
             },
+            // 2. 奶油酥餅禮盒
             {
-                id: 'pineapple_native',
-                name: '土鳳梨酥禮盒',
-                originalPrice: 430,
-                specialPrice: 410,
-                description: '微酸口感，吃得到鳳梨纖維。',
-                image: '', 
-                ingredients: '麵粉、土鳳梨餡、奶油、糖、蛋',
-                unit: '8入/盒'
+                type: 'single',
+                id: 'butter_cookie',
+                name: '經典奶油酥餅禮盒',
+                originalPrice: 320, // 暫定價格，請修改
+                specialPrice: 300,  // 暫定價格，請修改
+                description: '質感墨綠手提袋裝。濃郁奶油香氣，酥鬆口感入口即化，限量40盒。',
+                image: 'https://rovihandmade.github.io/2026_lunar_new_year/gift_butter.jpg', // 請確認檔名是否一致
+                ingredients: '奶油酥餅 x 8入',
+                totalStock: 40,
+                remainingStock: 30
             },
+            // 3. 鳳梨酥系列 (10入)
             {
-                id: 'egg_yolk_box',
-                name: '經典蛋黃酥禮盒',
-                originalPrice: 420,
-                specialPrice: 400,
-                description: '烏豆沙/綠豆沙任選，皮酥蛋黃大顆。',
-                image: '',
-                ingredients: '紅豆沙、鹹蛋黃、麵粉、奶油',
-                unit: '6入/盒'
+                type: 'group',
+                name: '旺來鳳梨酥禮盒 (10入)',
+                image: 'https://rovihandmade.github.io/2026_lunar_new_year/gift_pineapple.jpg', // 請確認檔名是否一致
+                description: '粉嫩禮盒包裝，內含10顆。皮酥餡香，經典原味與土鳳梨兩種風味任選。',
+                ingredients: '經典鳳梨酥/土鳳梨酥 x 10入',
+                totalStock: 50,
+                remainingStock: 30, // 兩款共用庫存顯示
+                variants: [
+                    {
+                        id: 'pineapple_classic',
+                        name: '經典鳳梨酥',
+                        originalPrice: 430, // 已更新價格
+                        specialPrice: 400   // 請確認優惠價
+                    },
+                    {
+                        id: 'pineapple_native',
+                        name: '土鳳梨酥 (微酸)',
+                        originalPrice: 550, // 已更新價格
+                        specialPrice: 520   // 請確認優惠價
+                    }
+                ]
+            },
+            // 4. 腰果禮盒
+            {
+                type: 'single',
+                id: 'cashew_box',
+                name: '雙饗腰果禮盒',
+                originalPrice: 330, // 暫定價格，請修改
+                specialPrice: 310,  // 暫定價格，請修改
+                description: '健康美味首選。嚴選腰果，低溫烘焙保留營養與酥脆口感。',
+                image: 'https://rovihandmade.github.io/2026_lunar_new_year/gift_cashew.jpg', // 請確認檔名是否一致
+                ingredients: '義式蒜味掛霜腰果(150g)/可可脆腰果(100g)',
+                totalStock: 50,
+                remainingStock: 39
             }
         ];
 
-        // 4. 加購品列表 (New!)
-        const addOns = [
-            {
-                id: 'cookies_bag',
-                name: '手工餅乾獨享包',
-                price: 100, // 加購通常只有單一價格
-                image: '', 
-                unit: '包'
-            },
-            {
-                id: 'gift_bag',
-                name: '額外精美提袋',
-                price: 10,
-                image: '',
-                unit: '個'
-            }
-        ];
-
-        // ====== 程式邏輯區 (通常不需要動) ======
         let cart = [];
 
         // 初始化
         document.addEventListener('DOMContentLoaded', () => {
             renderProducts();
-            renderAddOns(); // 渲染加購區
             updateCartDisplay();
-            
-            // 綁定購物車開關
-            document.querySelector('.cart-icon').addEventListener('click', () => {
-                document.getElementById('cart-summary-section').classList.add('active');
-            });
-            document.getElementById('close-cart-btn').addEventListener('click', () => {
-                document.getElementById('cart-summary-section').classList.remove('active');
-            });
-            
-            // 綁定結帳按鈕
-            document.getElementById('proceed-to-form-btn').addEventListener('click', generateGoogleFormUrl);
-            document.getElementById('clear-cart-btn').addEventListener('click', clearCart);
+            setupEventListeners();
         });
 
         // 渲染主產品
         function renderProducts() {
-            const list = document.getElementById('product-list');
-            list.innerHTML = '';
+            const container = document.getElementById('product-list');
+            container.innerHTML = '';
+
             products.forEach(p => {
-                const imgHtml = p.image ? `<div class="product-image-container"><img src="${p.image}"></div>` : `<div class="product-image-placeholder"><i class="fas fa-camera"></i><p>${p.name}</p></div>`;
-                
                 const card = document.createElement('div');
                 card.className = 'product-card';
-                card.innerHTML = `
-                    ${imgHtml}
-                    <div class="product-content">
-                        <h3>${p.name}</h3>
-                        <p class="description">${p.description}</p>
-                        <p class="ingredients">成分: ${p.ingredients}</p>
-                        <div class="price-area">
-                            <span class="original-price">$${p.originalPrice}</span>
-                            <span class="special-price">$${p.specialPrice}</span>
-                        </div>
-                        <button class="btn primary-btn add-to-cart-btn" onclick="addToCart('${p.id}', 1, 'main')">加入購物車 +1</button>
+
+                // 庫存標籤
+                const stockBadge = `
+                    <div class="stock-badge">
+                        <i class="fas fa-fire"></i> 限量 ${p.totalStock} 盒｜剩餘 ${p.remainingStock} 盒
                     </div>
                 `;
-                list.appendChild(card);
-            });
-        }
 
-        // 渲染加購品 (簡化版卡片)
-        function renderAddOns() {
-            const list = document.getElementById('addon-list');
-            list.innerHTML = '';
-            addOns.forEach(p => {
-                const card = document.createElement('div');
-                card.className = 'addon-card';
-                card.innerHTML = `
-                    <h3>${p.name}</h3>
-                    <div class="price">$${p.price} / ${p.unit}</div>
-                    <button class="btn secondary-btn add-to-cart-btn" onclick="addToCart('${p.id}', 1, 'addon')">加購 +1</button>
-                `;
-                list.appendChild(card);
-            });
-        }
+                // 圖片區
+                const imgHtml = p.image 
+                    ? `<div class="product-image-container"><img src="${p.image}" alt="${p.name}"></div>`
+                    : `<div class="product-image-placeholder"><p>${p.name}</p></div>`;
 
-        // 加入購物車
-        window.addToCart = function(id, quantity, type) {
-            const existing = cart.find(item => item.id === id);
-            if (existing) {
-                existing.quantity += quantity;
-            } else {
-                // 找出產品資料 (可能是主產品或加購品)
-                let product = products.find(p => p.id === id);
-                let price = product ? product.specialPrice : 0;
-                
-                if (!product) {
-                    product = addOns.find(p => p.id === id);
-                    price = product ? product.price : 0;
+                let contentHtml = '';
+
+                if (p.type === 'group') {
+                    // --- 組合商品渲染邏輯 (這裡修改了顯示原價的語法) ---
+                    let variantsHtml = '';
+                    p.variants.forEach(v => {
+                        variantsHtml += `
+                            <div class="variant-item">
+                                <div class="variant-info">
+                                    <span class="variant-name">${v.name}</span>
+                                    <div class="variant-price-group">
+                                        <span class="variant-original-price">$${v.originalPrice}</span>
+                                        <span class="variant-special-price">$${v.specialPrice}</span>
+                                    </div>
+                                </div>
+                                <div class="quantity-control">
+                                    <div class="qty-btn-group">
+                                        <button data-id="${v.id}" data-action="decrease">-</button>
+                                        <input type="number" value="0" min="0" data-id="${v.id}" class="qty-input">
+                                        <button data-id="${v.id}" data-action="increase">+</button>
+                                    </div>
+                                    <button class="btn primary-btn add-to-cart-btn" style="width:auto; padding:5px 15px;" data-id="${v.id}">加入</button>
+                                </div>
+                            </div>
+                        `;
+                    });
+
+                    contentHtml = `
+                        <div class="product-content">
+                            <h3>${p.name}</h3>
+                            <p class="description">${p.description}</p>
+                            <p class="ingredients">內容：${p.ingredients}</p>
+                            <div class="variants-container">
+                                ${variantsHtml}
+                            </div>
+                        </div>
+                    `;
+
+                } else {
+                    // --- 單一商品渲染邏輯 ---
+                    contentHtml = `
+                        <div class="product-content">
+                            <h3>${p.name}</h3>
+                            <p class="description">${p.description}</p>
+                            <p class="ingredients">內容：${p.ingredients}</p>
+                            
+                            <div class="single-product-footer">
+                                <div class="price-area">
+                                    <span class="original-price">$${p.originalPrice}</span>
+                                    <span class="special-price">$${p.specialPrice}</span>
+                                </div>
+                                <div class="quantity-control">
+                                    <div class="qty-btn-group">
+                                        <button data-id="${p.id}" data-action="decrease">-</button>
+                                        <input type="number" value="0" min="0" data-id="${p.id}" class="qty-input">
+                                        <button data-id="${p.id}" data-action="increase">+</button>
+                                    </div>
+                                </div>
+                                <button class="btn primary-btn add-to-cart-btn" data-id="${p.id}">加入購物車</button>
+                            </div>
+                        </div>
+                    `;
                 }
 
-                if(product) {
-                    cart.push({ id: id, name: product.name, price: price, quantity: quantity });
+                card.innerHTML = stockBadge + imgHtml + contentHtml;
+                container.appendChild(card);
+            });
+        }
+
+        // 事件綁定
+        function setupEventListeners() {
+            // 數量增減按鈕
+            document.addEventListener('click', (e) => {
+                if(e.target.dataset.action === 'increase') {
+                    const input = document.querySelector(`.qty-input[data-id="${e.target.dataset.id}"]`);
+                    input.value = parseInt(input.value) + 1;
+                }
+                if(e.target.dataset.action === 'decrease') {
+                    const input = document.querySelector(`.qty-input[data-id="${e.target.dataset.id}"]`);
+                    if(parseInt(input.value) > 0) input.value = parseInt(input.value) - 1;
+                }
+                // 加入購物車按鈕
+                if(e.target.classList.contains('add-to-cart-btn')) {
+                    const id = e.target.dataset.id;
+                    const input = document.querySelector(`.qty-input[data-id="${id}"]`);
+                    const qty = parseInt(input.value);
+                    if(qty > 0) {
+                        addToCart(id, qty);
+                        input.value = 0; // 重置
+                        alert('已加入購物車！');
+                    } else {
+                        alert('請選擇數量');
+                    }
+                }
+            });
+
+            // 購物車開關
+            document.querySelector('.cart-icon').addEventListener('click', toggleCart);
+            document.getElementById('close-cart-btn').addEventListener('click', toggleCart);
+            document.getElementById('clear-cart-btn').addEventListener('click', () => { cart = []; updateCartDisplay(); });
+            document.getElementById('proceed-to-form-btn').addEventListener('click', generateGoogleFormUrl);
+        }
+
+        // 購物車邏輯
+        function addToCart(id, qty) {
+            const existing = cart.find(item => item.id === id);
+            if(existing) {
+                existing.quantity += qty;
+            } else {
+                let productInfo = null;
+                let price = 0;
+                
+                let p = products.find(p => p.id === id);
+                if(p) {
+                    productInfo = p;
+                    price = p.specialPrice;
+                } 
+                else {
+                    products.forEach(group => {
+                        if(group.type === 'group') {
+                            const v = group.variants.find(v => v.id === id);
+                            if(v) {
+                                productInfo = v;
+                                price = v.specialPrice;
+                            }
+                        }
+                    });
+                }
+
+                if(productInfo) {
+                    cart.push({ id: id, name: productInfo.name, price: price, quantity: qty });
                 }
             }
             updateCartDisplay();
-            // 簡單提示
-            const btn = event.target;
-            const originalText = btn.innerText;
-            btn.innerText = "已加入!";
-            btn.style.background = "#27AE60";
-            btn.style.color = "#fff";
-            setTimeout(() => { 
-                btn.innerText = originalText; 
-                btn.style.background = ""; 
-                btn.style.color = "";
-            }, 1000);
-        };
+        }
 
-        // 更新購物車顯示
         function updateCartDisplay() {
             const display = document.getElementById('cart-items-display');
             const totalSpan = document.getElementById('cart-total-amount');
@@ -527,7 +594,7 @@
             let count = 0;
 
             if(cart.length === 0) {
-                display.innerHTML = '<p style="text-align:center; color:#999;">購物車是空的</p>';
+                display.innerHTML = '<p>購物車是空的。</p>';
             } else {
                 cart.forEach(item => {
                     total += item.price * item.quantity;
@@ -540,57 +607,41 @@
                             <strong>${item.name}</strong><br>
                             <small>$${item.price} x ${item.quantity}</small>
                         </div>
-                        <div>
+                        <div style="display:flex; align-items:center;">
                             <span style="font-weight:bold; color:#C0392B;">$${item.price * item.quantity}</span>
-                            <button onclick="removeFromCart('${item.id}')" style="margin-left:10px; border:none; background:none; color:#999;"><i class="fas fa-trash"></i></button>
+                            <button onclick="removeFromCart('${item.id}')" style="margin-left:10px; border:none; background:none; cursor:pointer;"><i class="fas fa-trash"></i></button>
                         </div>
                     `;
                     display.appendChild(div);
                 });
             }
-
             totalSpan.innerText = '$' + total;
             countSpan.innerText = count;
         }
 
-        // 移除商品
         window.removeFromCart = function(id) {
             cart = cart.filter(item => item.id !== id);
             updateCartDisplay();
         };
 
-        // 清空
-        function clearCart() {
-            if(confirm('確定清空購物車嗎？')) {
-                cart = [];
-                updateCartDisplay();
-            }
+        function toggleCart() {
+            const cartPanel = document.getElementById('cart-summary-section');
+            cartPanel.classList.toggle('active');
         }
 
-        // 產生 Google 表單連結
         function generateGoogleFormUrl() {
-            if (cart.length === 0) {
-                alert('購物車是空的喔！');
-                return;
-            }
-
-            let params = '';
+            if (cart.length === 0) { alert('購物車是空的'); return; }
             
-            // 遍歷購物車，尋找對應的 Entry ID
+            let params = '';
             cart.forEach(item => {
                 const entryId = PRODUCT_QUANTITY_ENTRY_IDS[item.id];
                 if (entryId) {
-                    // entry.123456=5 (注意：這裡直接用 & 串接)
-                    params += `&${entryId}=${item.quantity}`;
-                } else {
-                    console.warn('找不到產品 ID 對應的表單欄位:', item.id);
+                    params += `&entry.${entryId}=${item.quantity}`;
                 }
             });
-
-            const finalUrl = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/viewform?usp=pp_url${params}`;
             
-            // 開啟新視窗
-            window.open(finalUrl, '_blank');
+            const url = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/viewform?usp=pp_url${params}`;
+            window.open(url, '_blank');
         }
     </script>
 </body>
