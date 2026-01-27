@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【Rovi蘿薇手作烘培】2026 金馬迎春限量禮盒</title>
+    <title>【Rovi蘿薇手作烘培】2026 金馬迎春禮盒預購</title>
     <!-- 引入 Font Awesome 圖示 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- 引入圓體字型 -->
@@ -133,6 +133,7 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.2); z-index: 10;
         }
 
+        /* 圖片容器 */
         .product-image-container {
             width: 100%; height: 250px; 
             background-color: #ffffff;
@@ -157,10 +158,10 @@
         .original-price { text-decoration: line-through; color: #999; font-size: 0.85em; margin-right: 5px; }
         .special-price { color: var(--primary-red); font-size: 1.3em; font-weight: 900; }
 
-        /* 組合產品(Group)樣式 - 修正價格顯示 */
+        /* 組合產品(Group)樣式 */
         .variant-item {
             border-top: 1px dashed #ddd;
-            padding: 12px 0; /* 稍微增加間距 */
+            padding: 12px 0; 
         }
         .variant-item:first-of-type { border-top: 1px solid #eee; margin-top: 10px; }
         
@@ -169,7 +170,7 @@
             justify-content: space-between; 
             align-items: center; 
             margin-bottom: 8px; 
-            flex-wrap: wrap; /* 讓手機版價格太長時可以換行 */
+            flex-wrap: wrap; 
         }
         .variant-name { font-weight: 700; color: #5D4037; font-size: 0.95em; }
         
@@ -234,8 +235,9 @@
             <div class="logo"><i class="fas fa-gift"></i> Rovi蘿薇手作烘焙 2026新春禮盒</div>
             <nav class="nav-links">
                 <a href="#about">關於我們</a>
+                <a href="#limited-list">限量禮盒</a>
+                <a href="#classic-list">經典伴手禮</a>
                 <a href="#order-info">訂購須知</a>
-                <a href="#products">限量禮盒</a>
                 <a href="#contact">聯絡我們</a>
             </nav>
             <div class="cart-icon">
@@ -251,7 +253,25 @@
             <div class="hero-text">
                 <h1>2026 金馬迎春・新春獻禮</h1>
                 <p>嚴選食材，匠心烘焙。限量禮盒預購中，為您傳遞最真摯的祝福。</p>
-                <a href="#products" class="btn primary-btn" style="background:#fff; color:#C0392B; width: auto;">立即選購</a>
+                <a href="#limited-list" class="btn primary-btn" style="background:#fff; color:#C0392B; width: auto;">立即選購</a>
+            </div>
+        </section>
+
+        <!-- 區塊1：限量禮盒 -->
+        <section id="limited-list" class="section container">
+            <h2>新春限量禮盒</h2>
+            <p class="section-description">主打4款精美禮盒，數量有限，售完為止。</p>
+            <div class="product-grid" id="limited-products">
+                <!-- JS 動態生成 -->
+            </div>
+        </section>
+
+        <!-- 區塊2：經典伴手禮 (新增加的) -->
+        <section id="classic-list" class="section container" style="background-color: #FFFBF0; border-radius: 20px; padding: 40px 20px;">
+            <h2>經典常態・人氣伴手禮</h2>
+            <p class="section-description">平日熱銷的經典美味，過年送禮自用兩相宜。</p>
+            <div class="product-grid" id="classic-products">
+                <!-- JS 動態生成 -->
             </div>
         </section>
 
@@ -259,20 +279,11 @@
         <section id="order-info" class="section" style="background-color: #F9EBEA;">
             <div class="container">
                 <h2>新春訂購須知</h2>
-                <div style="text-align:center; max-width:800px; margin:0 auto;">
-                    <p><strong>訂購期間：</strong>即日起至 2026/01/15 止。</p>
-                    <p><strong>取貨方式：</strong>面交 / 郵局宅配 / 7-11店到店。</p>
-                    <p><strong>付款方式：</strong>轉帳匯款 / LINE PAY。</p>
+                <div style="text-align:center; max-width:800px; margin:0 auto; font-size: 1.1em;">
+                    <p><strong><i class="fas fa-calendar-alt"></i> 預購期間：</strong>即日起至 2026/01/15 止。</p>
+                    <p><strong><i class="fas fa-truck"></i> 取貨方式：</strong>面交 / 郵局宅配 / 7-11店到店。</p>
+                    <p><strong><i class="fas fa-money-bill-wave"></i> 付款方式：</strong>轉帳匯款 / LINE PAY。</p>
                 </div>
-            </div>
-        </section>
-
-        <!-- 產品列表 -->
-        <section id="products" class="section container">
-            <h2>新春限量禮盒</h2>
-            <p class="section-description">主打4款精美禮盒，數量有限，售完為止。</p>
-            <div class="product-grid" id="product-list">
-                <!-- JS 動態生成 -->
             </div>
         </section>
         
@@ -281,17 +292,18 @@
             <h2>常見問題&溫馨提醒</h2>
             <div style="background:#fff; padding:30px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
                 <h3>Q: 禮盒的保存期限？</h3>
-                <p>A:
-                <p>1.鳳梨酥系列、蛋黃酥系列及餅乾系列常溫保存2週（請放置陰涼處），冷藏可保存4週，食用前建議回烤，風味更佳。</p>
-                <p>2.腰果系列常溫保存3週（請放置陰涼處）。</p>
-                <p>3.開封後請盡快食用完畢。</p>
-
-
+                <p>A:</p>
+                <ul style="list-style-type: disc; margin-left: 20px;">
+                    <li>1.鳳梨酥系列、蛋黃酥系列及餅乾系列常溫保存2週（請放置陰涼處），冷藏可保存4週，食用前建議回烤，風味更佳。</li>
+                    <li>2.腰果系列常溫保存3週（請放置陰涼處）。</li>
+                    <li>3.開封後請盡快食用完畢。</li>
+                </ul>
                 <hr style="margin:20px 0; border:0; border-top:1px dashed #ddd;">
                 <h3>Q: 訂單何時確認？</h3>
                 <p>A: 填單後我們會盡速與您聯絡確認訂單內容，請留意 Email 或 Line 訊息。</p>
-                <h3>溫馨小提醒</h3>
-                <p>為了呈現最完美的層次口感，我們的酥皮類點心（如綠豆椪、蛋黃酥）外皮製作得相當輕薄酥鬆。在運送的旅途中，可能會因為路途顛簸或靜電摩擦，導致少許表皮脫落或沾黏在包裝袋上。 這些「旅行的痕跡」雖然讓外觀稍微不完美，但絕對不會影響內餡的美味與品質，請您放心享用這份用心製作的美味！。</p>
+                <hr style="margin:20px 0; border:0; border-top:1px dashed #ddd;">
+                <h3>Q: 溫馨小提醒</h3>
+                <p>為了呈現最完美的層次口感，我們的酥皮類點心（如綠豆椪、蛋黃酥）外皮製作得相當輕薄酥鬆。在運送的旅途中，可能會因為路途顛簸或靜電摩擦，導致少許表皮脫落或沾黏在包裝袋上。 這些「旅行的痕跡」雖然讓外觀稍微不完美，但絕對不會影響內餡的美味與品質，請您放心享用這份用心製作的美味！</p>
             </div>
         </section>
 
@@ -333,119 +345,170 @@
 
     <!-- JavaScript 邏輯 -->
     <script>
-        // ====== 設定區：請填入您的 Google 表單資訊 ======
-        const GOOGLE_FORM_ID = '1FAIpQLSeEyB2hoKkuFdFzjPW34Z4X57UB1yXg5fjashv5bCn96gfeAA'; // 您的表單 ID
+        // ====== 設定區 ======
+        const GOOGLE_FORM_ID = '1FAIpQLSftQ8ifZW9UPKFts4MPi7-_iIiYuBhnEF53sjlBRmqHafNf3Q'; 
         
-        // 表單欄位對應 ID (請依照您的新春表單修改)
+        // Google Form Entry IDs (請記得更新新產品的 ID)
         const PRODUCT_QUANTITY_ENTRY_IDS = {
-            'mix_9grid': '111111111',     // 9宮格 ID
-            'butter_cookie': '222222222', // 奶油酥餅 ID
-            'pineapple_classic': '123456789', // 經典鳳梨酥 ID
-            'pineapple_native': '987654321',  // 土鳳梨酥 ID
-            'cashew_box': '333333333'     // 腰果 ID
+            // 限量禮盒
+            'mix_9grid_box': '2026671317',     
+            'butter_cookie_box': '1710873516', 
+            'pineapple10_classic': '278886067', // 注意：鳳梨酥禮盒拆分 ID
+            'pineapple10_native': '198162276',  
+            'cashew_box': '704719616',
+            
+            // 經典品項 (請填入正確的 ID)
+            'yolk_red': '531001400',
+            'yolk_green': '604608267',
+            'yolk_mix': '2141222840',
+            'green_pung': '2072600674',
+            'pineapple_classic_8': '1642178507',
+            'pineapple_native_8': '1025232618',
+            'pineapple_classic_5': '285363114',
+            'pineapple_native_5': '1364861391'
         };
 
-        // ====== 產品資料 (限量版) ======
-        const products = [
-            // 1. 九宮格綜合禮盒
+        // ====== 1. 限量禮盒資料 ======
+        const limitedProducts = [
             {
                 type: 'single',
-                id: 'mix_9grid',
+                id: 'mix_9grid_box', 
                 name: '金馬迎春・九宮格綜合禮盒',
-                originalPrice: 550, // 暫定價格，請修改
-                specialPrice: 520,  // 暫定價格，請修改
-                description: '限量50盒！經典蛋黃酥、綠豆椪與精選手工餅乾的完美組合，送禮大氣首選。',
-                image: 'https://rovihandmade.github.io/2026_lunar_new_year/gift_9grid.jpg', // 請確認檔名是否一致
-                ingredients: '烏豆沙蛋黃酥x1入、綠豆沙蛋黃酥x1入、紅豆麻吉酥x1入、招財貓原味餅乾x3入、檸檬糖霜餅乾x3入、巧克力鑽石餅乾x3入、桂圓手作餅乾x3入、義式蒜味掛霜腰果(60g)x1入、可可脆腰果(40g)x1入',
-                totalStock: 50,
-                remainingStock: 30
+                originalPrice: 550, specialPrice: 520,  
+                description: '限量50盒！經典蛋黃酥、綠豆椪與精選手工餅乾的完美組合。',
+                image: 'https://rovihandmade.github.io/2026_lunar_new_year/gift_9grid.jpg', 
+                ingredients: '蛋黃酥x3、手工餅乾x6',
+                isLimited: true // 標記為限量
             },
-            // 2. 奶油酥餅禮盒
             {
                 type: 'single',
-                id: 'butter_cookie',
+                id: 'butter_cookie_box',
                 name: '經典奶油酥餅禮盒',
-                originalPrice: 320, 
-                specialPrice: 300,  
+                originalPrice: 320, specialPrice: 300,  
                 description: '質感墨綠手提袋裝。濃郁奶油香氣，酥鬆口感入口即化，限量40盒。',
-                image: 'https://rovihandmade.github.io/2026_lunar_new_year/gift_butter.jpg', // 請確認檔名是否一致
+                image: 'https://rovihandmade.github.io/2026_lunar_new_year/gift_butter.jpg', 
                 ingredients: '奶油酥餅 x 8入',
-                totalStock: 40,
-                remainingStock: 30
+                isLimited: true
             },
-            // 3. 鳳梨酥系列 (10入)
             {
                 type: 'group',
                 name: '旺來鳳梨酥禮盒 (10入)',
-                image: 'https://rovihandmade.github.io/2026_lunar_new_year/gift_pineapple.jpg', // 請確認檔名是否一致
-                description: '粉嫩禮盒包裝，內含10顆。皮酥餡香，經典原味與土鳳梨兩種風味任選。',
+                image: 'https://rovihandmade.github.io/2026_lunar_new_year/gift_pineapple.jpg', 
+                description: '粉嫩禮盒包裝，內含10顆。限量50盒。',
                 ingredients: '經典鳳梨酥/土鳳梨酥 x 10入',
-                totalStock: 50,
-                remainingStock: 30,
+                isLimited: true,
                 variants: [
-                    {
-                        id: 'pineapple_classic',
-                        name: '經典鳳梨酥',
-                        originalPrice: 430,
-                        specialPrice: 400
-                    },
-                    {
-                        id: 'pineapple_native',
-                        name: '土鳳梨酥 (微酸)',
-                        originalPrice: 550,
-                        specialPrice: 520
-                    }
+                    { id: 'pineapple10_classic', name: '經典鳳梨酥', originalPrice: 430, specialPrice: 400 },
+                    { id: 'pineapple10_native', name: '土鳳梨酥 (微酸)', originalPrice: 550, specialPrice: 520 }
                 ]
             },
-            // 4. 腰果禮盒
             {
                 type: 'single',
                 id: 'cashew_box',
                 name: '雙饗腰果禮盒',
-                originalPrice: 330, 
-                specialPrice: 310,  
-                description: '健康美味首選。嚴選腰果，低溫烘焙保留營養與酥脆口感。',
+                originalPrice: 330, specialPrice: 310,  
+                description: '健康美味首選。嚴選腰果，低溫烘焙。限量50盒。',
                 image: 'https://rovihandmade.github.io/2026_lunar_new_year/gift_cashew.jpg', 
-                ingredients: '義式蒜味掛霜腰果(150g)/可可脆腰果(100g)',
-                totalStock: 50,
-                remainingStock: 39
+                ingredients: '義式蒜味(150g)/可可脆(100g)',
+                isLimited: true
+            }
+        ];
+
+        // ====== 2. 經典常態資料 (請修改價格與圖片) ======
+        const classicProducts = [
+            {
+                type: 'single',
+                id: 'yolk_red',
+                name: '烏豆沙蛋黃酥禮盒',
+                originalPrice: 420, specialPrice: 400, // 價格請確認
+                description: '綿密烏豆沙配上整顆鹹蛋黃，經典不敗。',
+                image: 'https://rovihandmade.github.io/2026_lunar_new_year/yolk_red.jpg', 
+                ingredients: '烏豆沙蛋黃酥 x 6入'
+            },
+            {
+                type: 'single',
+                id: 'yolk_green',
+                name: '綠豆沙蛋黃酥禮盒',
+                originalPrice: 420, specialPrice: 400, // 價格請確認
+                description: '清爽綠豆沙，口感細緻不甜膩。',
+                image: 'https://rovihandmade.github.io/2026_lunar_new_year/yolk_green.jpg', 
+                ingredients: '綠豆沙蛋黃酥 x 6入'
+            },
+            {
+                type: 'single',
+                id: 'yolk_mix',
+                name: '綜合蛋黃酥禮盒',
+                originalPrice: 420, specialPrice: 400, // 價格請確認
+                description: '烏豆沙3入 + 綠豆沙3入，一次滿足。',
+                image: 'https://rovihandmade.github.io/2026_lunar_new_year/yolk_mix.jpg', 
+                ingredients: '烏豆沙/綠豆沙蛋黃酥各3入'
+            },
+            {
+                type: 'single',
+                id: 'green_pung',
+                name: '純綠豆椪禮盒',
+                originalPrice: 380, specialPrice: 360, // 價格請確認
+                description: '層層酥皮包裹綿密綠豆餡，素食可食。',
+                image: 'https://rovihandmade.github.io/2026_lunar_new_year/green_pung.png', 
+                ingredients: '純綠豆椪 x 6入'
+            },
+            {
+                type: 'group',
+                name: '鳳梨酥禮盒 (8入)',
+                image: 'https://rovihandmade.github.io/2026_lunar_new_year/pineapple_8.jpg', 
+                description: '非限量版包裝，適合日常送禮。',
+                ingredients: '經典鳳梨酥/土鳳梨酥 x 8入',
+                variants: [
+                    { id: 'pineapple_classic_8', name: '經典鳳梨酥 (8入)', originalPrice: 340, specialPrice: 320 },
+                    { id: 'pineapple_native_8', name: '土鳳梨酥 (8入)', originalPrice: 440, specialPrice: 420 }
+                ]
+            },
+            {
+                type: 'group',
+                name: '鳳梨酥禮盒 (5入)',
+                image: 'https://rovihandmade.github.io/2026_lunar_new_year/pineapple_5.jpg', 
+                description: '非限量版包裝，適合日常送禮。',
+                ingredients: '經典鳳梨酥/土鳳梨酥 x 5入',
+                variants: [
+                    { id: 'pineapple_classic_5', name: '經典鳳梨酥 (5入)', originalPrice: 215, specialPrice: 200 },
+                    { id: 'pineapple_native_5', name: '土鳳梨酥 (5入)', originalPrice: 275, specialPrice: 260 }
+                ]
             }
         ];
 
         let cart = [];
 
-        // 初始化
         document.addEventListener('DOMContentLoaded', () => {
-            renderProducts();
+            renderSection('limited-products', limitedProducts);
+            renderSection('classic-products', classicProducts);
             updateCartDisplay();
             setupEventListeners();
         });
 
-        // 渲染主產品
-        function renderProducts() {
-            const container = document.getElementById('product-list');
+        // 渲染函數 (通用)
+        function renderSection(containerId, data) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
             container.innerHTML = '';
 
-            products.forEach(p => {
+            data.forEach(p => {
                 const card = document.createElement('div');
                 card.className = 'product-card';
 
-                // 庫存標籤
-                const stockBadge = `
-                    <div class="stock-badge">
-                        <i class="fas fa-fire"></i> 限量 ${p.totalStock} 盒｜剩餘 ${p.remainingStock} 盒
-                    </div>
-                `;
+                // 限量標籤 (只在限量區塊顯示)
+                let badgeHtml = '';
+                if (p.isLimited) {
+                    badgeHtml = `<div class="stock-badge" style="background:#C0392B;">🔥 熱銷預購中</div>`;
+                }
 
-                // 圖片區
-                const imgHtml = p.image 
-                    ? `<div class="product-image-container"><img src="${p.image}" alt="${p.name}"></div>`
-                    : `<div class="product-image-placeholder"><p>${p.name}</p></div>`;
+                const imgHtml = p.image.includes('placehold') 
+                    ? `<div class="product-image-placeholder"><p>${p.name}</p></div>`
+                    : `<div class="product-image-container"><img src="${p.image}" alt="${p.name}"></div>`;
 
                 let contentHtml = '';
 
                 if (p.type === 'group') {
-                    // --- 組合商品渲染邏輯  ---
+                    // 組合商品
                     let variantsHtml = '';
                     p.variants.forEach(v => {
                         variantsHtml += `
@@ -468,26 +531,21 @@
                             </div>
                         `;
                     });
-
                     contentHtml = `
                         <div class="product-content">
                             <h3>${p.name}</h3>
                             <p class="description">${p.description}</p>
                             <p class="ingredients">內容：${p.ingredients}</p>
-                            <div class="variants-container">
-                                ${variantsHtml}
-                            </div>
+                            <div class="variants-container">${variantsHtml}</div>
                         </div>
                     `;
-
                 } else {
-                    // --- 單一商品渲染邏輯 ---
+                    // 單一商品
                     contentHtml = `
                         <div class="product-content">
                             <h3>${p.name}</h3>
                             <p class="description">${p.description}</p>
                             <p class="ingredients">內容：${p.ingredients}</p>
-                            
                             <div class="single-product-footer">
                                 <div class="price-area">
                                     <span class="original-price">$${p.originalPrice}</span>
@@ -506,14 +564,13 @@
                     `;
                 }
 
-                card.innerHTML = stockBadge + imgHtml + contentHtml;
+                card.innerHTML = badgeHtml + imgHtml + contentHtml;
                 container.appendChild(card);
             });
         }
 
         // 事件綁定
         function setupEventListeners() {
-            // 數量增減按鈕
             document.addEventListener('click', (e) => {
                 if(e.target.dataset.action === 'increase') {
                     const input = document.querySelector(`.qty-input[data-id="${e.target.dataset.id}"]`);
@@ -523,56 +580,61 @@
                     const input = document.querySelector(`.qty-input[data-id="${e.target.dataset.id}"]`);
                     if(parseInt(input.value) > 0) input.value = parseInt(input.value) - 1;
                 }
-                // 加入購物車按鈕
                 if(e.target.classList.contains('add-to-cart-btn')) {
                     const id = e.target.dataset.id;
                     const input = document.querySelector(`.qty-input[data-id="${id}"]`);
                     const qty = parseInt(input.value);
                     if(qty > 0) {
                         addToCart(id, qty);
-                        input.value = 0; // 重置
+                        input.value = 0;
                         alert('已加入購物車！');
                     } else {
                         alert('請選擇數量');
                     }
                 }
             });
-
-            // 購物車開關
             document.querySelector('.cart-icon').addEventListener('click', toggleCart);
             document.getElementById('close-cart-btn').addEventListener('click', toggleCart);
             document.getElementById('clear-cart-btn').addEventListener('click', () => { cart = []; updateCartDisplay(); });
             document.getElementById('proceed-to-form-btn').addEventListener('click', generateGoogleFormUrl);
         }
 
-        // 購物車邏輯
+        // 購物車邏輯 (搜尋兩個陣列)
+        function findProductInfo(id) {
+            // 先找限量
+            let p = limitedProducts.find(x => x.id === id);
+            if(p) return { name: p.name, price: p.specialPrice };
+            
+            // 找限量組合
+            for(let group of limitedProducts) {
+                if(group.type === 'group') {
+                    let v = group.variants.find(x => x.id === id);
+                    if(v) return { name: v.name, price: v.specialPrice };
+                }
+            }
+
+            // 找經典
+            p = classicProducts.find(x => x.id === id);
+            if(p) return { name: p.name, price: p.specialPrice };
+
+            // 找經典組合
+            for(let group of classicProducts) {
+                if(group.type === 'group') {
+                    let v = group.variants.find(x => x.id === id);
+                    if(v) return { name: v.name, price: v.specialPrice };
+                }
+            }
+            return null;
+        }
+
         function addToCart(id, qty) {
             const existing = cart.find(item => item.id === id);
             if(existing) {
                 existing.quantity += qty;
             } else {
-                let productInfo = null;
-                let price = 0;
-                
-                let p = products.find(p => p.id === id);
-                if(p) {
-                    productInfo = p;
-                    price = p.specialPrice;
-                } 
-                else {
-                    products.forEach(group => {
-                        if(group.type === 'group') {
-                            const v = group.variants.find(v => v.id === id);
-                            if(v) {
-                                productInfo = v;
-                                price = v.specialPrice;
-                            }
-                        }
-                    });
-                }
-
-                if(productInfo) {
-                    cart.push({ id: id, name: productInfo.name, price: price, quantity: qty });
+                const info = findProductInfo(id);
+                if(info) {
+                    cart.push({ id: id, name: info.name, price: info.price, quantity: qty });
                 }
             }
             updateCartDisplay();
@@ -593,18 +655,11 @@
                 cart.forEach(item => {
                     total += item.price * item.quantity;
                     count += item.quantity;
-                    
                     const div = document.createElement('div');
                     div.className = 'cart-item';
                     div.innerHTML = `
-                        <div>
-                            <strong>${item.name}</strong><br>
-                            <small>$${item.price} x ${item.quantity}</small>
-                        </div>
-                        <div style="display:flex; align-items:center;">
-                            <span style="font-weight:bold; color:#C0392B;">$${item.price * item.quantity}</span>
-                            <button onclick="removeFromCart('${item.id}')" style="margin-left:10px; border:none; background:none; cursor:pointer;"><i class="fas fa-trash"></i></button>
-                        </div>
+                        <div><strong>${item.name}</strong><br><small>$${item.price} x ${item.quantity}</small></div>
+                        <div><span style="font-weight:bold; color:#C0392B;">$${item.price * item.quantity}</span><button onclick="removeFromCart('${item.id}')" style="margin-left:10px; border:none; background:none; cursor:pointer;"><i class="fas fa-trash"></i></button></div>
                     `;
                     display.appendChild(div);
                 });
@@ -613,27 +668,16 @@
             countSpan.innerText = count;
         }
 
-        window.removeFromCart = function(id) {
-            cart = cart.filter(item => item.id !== id);
-            updateCartDisplay();
-        };
-
-        function toggleCart() {
-            const cartPanel = document.getElementById('cart-summary-section');
-            cartPanel.classList.toggle('active');
-        }
-
+        window.removeFromCart = function(id) { cart = cart.filter(item => item.id !== id); updateCartDisplay(); };
+        function toggleCart() { document.getElementById('cart-summary-section').classList.toggle('active'); }
+        
         function generateGoogleFormUrl() {
             if (cart.length === 0) { alert('購物車是空的'); return; }
-            
             let params = '';
             cart.forEach(item => {
                 const entryId = PRODUCT_QUANTITY_ENTRY_IDS[item.id];
-                if (entryId) {
-                    params += `&entry.${entryId}=${item.quantity}`;
-                }
+                if (entryId) { params += `&entry.${entryId}=${item.quantity}`; }
             });
-            
             const url = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/viewform?usp=pp_url${params}`;
             window.open(url, '_blank');
         }
